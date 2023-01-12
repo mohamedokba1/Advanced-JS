@@ -1,27 +1,12 @@
-let num1 = prompt("Enter the number 1: ");
-let num2 = prompt("Enter the number 2: ");
+let arrOfNumber = [10, 20, 30, 25, 60, 80];
 
-console.log("Before");
-console.log(`a: ${num1}`);
-console.log(`b: ${num2}`);
+// let result = arr.find((item)=> item > 20);
+// console.log(result);
 
-// swap using destructuring
-[num1, num2] = [num2, num1];
+function calcMaxMin(arr){
+    return [Math.max(...arr), Math.min(...arr)];
+}
 
-console.log("After");
-console.log(`a: ${num1}`);
-console.log(`b: ${num2}`);
-
-
-
-// let obj = {a:10, b:20}
-// // swapping using function passing by reference
-// function swapToNumbers(obj){
-//     let temp = obj.a;
-//     obj.a = obj.b;
-//     obj.b = temp;
-// }
-
-// swapToNumbers(obj);
-// console.log(`a: ${obj.a}`);
-// console.log(`b: ${obj.b}`);
+const result = calcMaxMin(arrOfNumber);
+[max, min] = result;
+console.log(`Max = ${max}, Min = ${min}`);
